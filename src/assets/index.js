@@ -87,3 +87,8 @@ export { default as quantum2 } from './q2i.png';
 export { default as oracleLogo } from './oracle.png';
 export { default as sapLogo } from './sap.png';
 export { default as osLogo } from './os.png';
+export { default as reactlogo } from './react.png';
+export { default as nodelogo } from './node.png';
+export { default as mongodblogo } from './mongodb.png';
+export { default as mysqlLogo } from './mySql.png';
+export { default as qstLogo } from './qstLogo.png';

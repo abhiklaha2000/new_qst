@@ -1,4 +1,4 @@
-import { curve, file02, heroBackground, homeSmile, loading, plusSquare, robot, searchMd, awsLogo , oracleLogo, sapLogo , osLogo} from "../assets";
+import { awsLogo , oracleLogo, sapLogo , osLogo , reactlogo, nodelogo, mongodblogo , mysqlLogo} from "../assets";
 import Button from "../components/Button";
 import Section from "../components/Section";
 import { MouseParallax, ScrollParallax } from "react-just-parallax";
@@ -138,14 +138,14 @@ const Hero = () => {
                             {/* Content positioned absolutely over the image */}
                             <div className="absolute inset-0 bg-black/10 flex flex-col bg-black/40 items-start justify-center text-center z-10 p-4 lg:m-[100px]">
                                 <p className="w-full md:w-[45vw] text-white font-bold text-[1.1rem] sm:text-[2rem] md:text-[3.5rem] lg:text-[2.5rem] mb-4 leading-relaxed text-left">
-                                    Explore the Possibilities of Development Connect with Quantum Brix
+                                    Explore the Possibilities of Development Connect with Quantum Shift Technologies
                                 </p>
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
-                                    Quantum Brix delivers expert SAP and Oracle solutions, transforming enterprise systems with innovation, efficiency, scalability, and intelligent business insights
+                                    Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
-                                <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
+                                {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
-                                </button>
+                                </button> */}
                             </div>
                         </div>
                     </SwiperSlide>
@@ -157,21 +157,22 @@ const Hero = () => {
                 <div className="hidden relative z-10 mt-20 lg:block text-black">
                     {/* <h5 className="tagline mb-6 text-center text-white/50">Quantum Brix Helping People Create Beautiful Website</h5> */}
                     <Marquee>
-                        <div className="flex items-center justify-center gap-[90px]">
-
-
+                        <div className="flex items-center justify-evenly gap-6">
                             <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={sapLogo} width={100} height={28} alt="" />
+                                <img src={reactlogo} width={100} height={20} alt="" />
                             </div>
                             <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={oracleLogo} width={134} height={28} alt="" />
+                                <img src={nodelogo} width={134} height={28} alt="" />
                             </div>
                             <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={osLogo} width={134} height={28} alt="" />
+                                <img src={mongodblogo} width={134} height={60} alt="" />
                                 {/* Linux Website */}
                             </div>
                             <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={awsLogo} width={134} height={28} alt="" />
+                                <img src={awsLogo} width={134} height={40} alt="" />
+                            </div>
+                            <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
+                                <img src={mysqlLogo} width={138} height={0} alt="" />
                             </div>
                         </div>
                     </Marquee>

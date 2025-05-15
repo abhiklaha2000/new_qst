@@ -1,6 +1,6 @@
 import Section from "../components/Section";
 import Heading from "../components/Heading";
-import { service1, service2, service3, check, openaiWhiteSymbol, gradient, play, loading, recording03, recording01, disc02, chromecast, sliders04 } from "../assets";
+import { service1, service2, service3, check, openaiWhiteSymbol, gradient, play, loading, recording03, recording01, disc02, chromecast, sliders04 , reactlogo} from "../assets";
 import ChatBubbleWing from "../assets/svg/ChatBubbleWing"
 
 const openaiServicesIcons = [recording03, recording01, disc02, chromecast, sliders04];

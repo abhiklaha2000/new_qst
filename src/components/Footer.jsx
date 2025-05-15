@@ -4,7 +4,7 @@ import { discordBlack, facebook, instagram, telegram, twitter } from "../assets"
 import { FaFacebook, FaGripLinesVertical, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { FiInstagram } from "react-icons/fi";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import {quantum2} from "../assets";
+import {qstLogo} from "../assets";
 import { Link, useNavigate } from "react-router-dom";
 
 
@@ -44,12 +44,12 @@ const Footer = () => {
           {/* First Footer Element */}
           <div className="flex-1 lg:flex-[1.5]">
             <div className="flex items-center gap-4">
-              <img src={quantum2} className="h-16 w-36" alt="Logo" />
+              <img src={qstLogo} className="h-16 w-24" alt="Logo" />
               {/* <img src={quantum2} className="h-20 w-48" alt="Company Name" /> */}
             </div>
             <div className="mt-5 pr-5">
-                Delivers cloud and enterprise solutions across AWS, Oracle, OS, and SAP services.
-                We help businesses scale with secure, automated, and reliable infrastructure.
+                We specialize in MERN stack development and AI avatars.<br />
+    Empowering businesses with modern web solutions and intelligent digital experiences.
             </div>
             <div className="flex gap-6 mt-5">
               <div className="bg-gray-800 h-12 w-12 rounded-full flex items-center justify-center">
@@ -90,8 +90,8 @@ const Footer = () => {
           <div className="flex-1">
             <div className="text-lg font-semibold">Contact Us</div>
             <div className="flex flex-col gap-4 mt-5">
-              <div>support@quantumbrix.com</div>
-              <div>9811170979</div>
+              <div>support@quantumshifttechnologies.com</div>
+              <div>9836445738</div>
             </div>
           </div>
   
@@ -119,7 +119,7 @@ const Footer = () => {
         {/* Extreme Footer */}
         <div className="border-t border-gray-600 px-5 lg:px-10 py-5 flex flex-col lg:flex-row justify-between items-center gap-5">
           <div className="text-sm text-center lg:text-left">
-            © 2025 Quantumbrix. All Rights Reserved.
+            © 2025 Quantumshift Technologies. All Rights Reserved.
           </div>
           <div className="flex items-center gap-4">
             <div

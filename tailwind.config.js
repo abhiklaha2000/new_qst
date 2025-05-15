@@ -22,6 +22,12 @@ export default {
                     6: "#252134",
                     8: "#0E0C15"
                 },
+                turquoise: {
+                    light: '#15b3a9',
+                    DEFAULT: '#129990',
+                    dark: '#0f7f77',
+                }
+
             },
             fontFamily: {
                 sans: ["var(--font-sora)", ...fontFamily.sans],

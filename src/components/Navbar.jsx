@@ -1,7 +1,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import { background, quantum2 } from "../assets";
+import { background, qstLogo, quantum2 } from "../assets";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { useEffect, useState } from "react";
@@ -11,6 +11,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { MdArrowDropDown } from "react-icons/md";
 import { IoMdArrowRoundForward } from "react-icons/io";
+import ContactUs from "./contactUs";
 
 
 
@@ -44,8 +45,8 @@ const navigation = [
     },
     {
         id: "6",
-        title: "New Account",
-        url: "#login",
+        title: "Contact Us",
+        url: "#",
         onlyMobile: true,
     },
 ];
@@ -59,6 +60,8 @@ const Header = () => {
     const [hovered, setHovered] = useState(false);
     const [hoveredSubMenu, setHoveredSubMenu] = useState(null); // Add this state
     const [scrolled, setScrolled] = useState(false);
+    const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+    // const [isContactUsFormOpen, setIsContactUsFormOpen] = useState(false);
 
     const toggleNavigation = () => {
         if (openNavigation) {
@@ -105,69 +108,69 @@ const Header = () => {
             <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
                 <a className="block w-[12rem] xl:mr-8">
                     <img
-                        src={quantum2}
+                        src={qstLogo}
                         // width={190}
                         // height={40}
                         alt="OpenAI"
-                        className="h-[60px] w-[200px]"
+                        className="h-[80px] w-[120px]"
                     />
                 </a>
 
                 <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent lg:p-6 lg:text-white`}>
-                    <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row gap-10 text-xl font-bold">
+                    <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row gap-15 text-xl font-bold md:mx-auto xl:gap-15">
                         <div className={`${textColor} hover:text-red-500 cursor-pointer`}  onClick={() => navigate("/")}>{navigation[0].title}</div>
-                        <Menu menuButton={<MenuButton className={`flex items-center gap-1 cursor-pointer hover:text-red-500 ${textColor}`}>{navigation[1].title}
-                            <IoMdArrowDropdown className={`${textColor} "text-lg"`} />
-                        </MenuButton>} transition>
+                        {/*<Menu menuButton={<MenuButton className={`flex items-center gap-1 cursor-pointer hover:text-red-500 ${textColor}`}>{navigation[1].title}*/}
+                        {/*    <IoMdArrowDropdown className={`${textColor} "text-lg"`} />*/}
+                        {/*</MenuButton>} transition>*/}
 
-                            <SubMenu label="SAP Solution Services" className="hover:text-red-500">
-                                <MenuItem className="hover:text-red-500">
-                                    <Link to={"/services/sap-business"}>SAP Business One Implementation & Consulting</Link>
-                                </MenuItem>
-                                <MenuItem className="hover:text-red-500">
-                                    <Link to={"/services/sap-consulting"}>SAP Consulting</Link>
-                                </MenuItem>
-                                <MenuItem className="hover:text-red-500">
-                                    <Link to={"/services/sap-support"}>SAP Support</Link>
-                                </MenuItem>
-                                <MenuItem className="hover:text-red-500">
-                                    <Link to={"/services/sap-upgradation"}>SAP Upgradation</Link>
-                                </MenuItem>
-                                <MenuItem className="hover:text-red-500">
-                                    <Link to={"/services/sap-business-one-cloud"}>SAP Business One Cloud</Link>
-                                </MenuItem>
-                                <MenuItem className="hover:text-red-500">
-                                    <Link to={"/services/sap-hana-solution"}>SAP Business One HANA Solution</Link>
-                                </MenuItem>
-                            </SubMenu>
-                            <SubMenu label="Oracle Services" className="hover:text-red-500">
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Installation & Configuration</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Database Upgrades & Migrations</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Performance Tuning</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Backup & Recovery Solutions</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>High Availability & Disaster Recovery</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Security & Compliance</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Managed Services</Link></MenuItem>
-                            </SubMenu>
-                            <SubMenu label="OS Services" className="hover:text-red-500">
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Installation & Configuration</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>System Hardening & Security</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Patch Management & Updates</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Performance Monitoring & Optimization</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>User & Permission Management</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Backup & Recovery Planning</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>OS Migration & Upgrades</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Remote & On-Site Support</Link></MenuItem>
-                            </SubMenu>
-                            <SubMenu label="AWS Cloud Services" className="hover:text-red-500">
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Deployment & Management</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Security</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Cost Optimization</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Managed Services</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Support</Link></MenuItem>
-                                <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Migration</Link></MenuItem>
-                            </SubMenu>
-                        </Menu>
+                        {/*    <SubMenu label="SAP Solution Services" className="hover:text-red-500">*/}
+                        {/*        <MenuItem className="hover:text-red-500">*/}
+                        {/*            <Link to={"/services/sap-business"}>SAP Business One Implementation & Consulting</Link>*/}
+                        {/*        </MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500">*/}
+                        {/*            <Link to={"/services/sap-consulting"}>SAP Consulting</Link>*/}
+                        {/*        </MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500">*/}
+                        {/*            <Link to={"/services/sap-support"}>SAP Support</Link>*/}
+                        {/*        </MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500">*/}
+                        {/*            <Link to={"/services/sap-upgradation"}>SAP Upgradation</Link>*/}
+                        {/*        </MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500">*/}
+                        {/*            <Link to={"/services/sap-business-one-cloud"}>SAP Business One Cloud</Link>*/}
+                        {/*        </MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500">*/}
+                        {/*            <Link to={"/services/sap-hana-solution"}>SAP Business One HANA Solution</Link>*/}
+                        {/*        </MenuItem>*/}
+                        {/*    </SubMenu>*/}
+                        {/*    <SubMenu label="Oracle Services" className="hover:text-red-500">*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Installation & Configuration</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Database Upgrades & Migrations</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Performance Tuning</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Backup & Recovery Solutions</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>High Availability & Disaster Recovery</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Security & Compliance</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/oracle-service"}>Managed Services</Link></MenuItem>*/}
+                        {/*    </SubMenu>*/}
+                        {/*    <SubMenu label="OS Services" className="hover:text-red-500">*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Installation & Configuration</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>System Hardening & Security</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Patch Management & Updates</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Performance Monitoring & Optimization</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>User & Permission Management</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Backup & Recovery Planning</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>OS Migration & Upgrades</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/os-service"}>Remote & On-Site Support</Link></MenuItem>*/}
+                        {/*    </SubMenu>*/}
+                        {/*    <SubMenu label="AWS Cloud Services" className="hover:text-red-500">*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Deployment & Management</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Security</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Cost Optimization</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Managed Services</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Support</Link></MenuItem>*/}
+                        {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Migration</Link></MenuItem>*/}
+                        {/*    </SubMenu>*/}
+                        {/*</Menu>*/}
                         <div className={`${textColor} hover:text-red-500 cursor-pointer`} onClick={() => navigate('/portfolio')}>{navigation[2].title}</div>
                         <div className={`${textColor} hover:text-red-500 cursor-pointer`} onClick={() => navigate('/about-us')}>{navigation[3].title}</div>
                         <div className={`${textColor} hover:text-red-500 cursor-pointer`} onClick={() => navigate('/career')}>{navigation[4].title}</div>
@@ -194,18 +197,129 @@ const Header = () => {
                     </div>
                 </nav>
 
-                {/* <a href="#signup" className={`text-white button hidden mr-8 !text-lg !text-black-900 text-white/50 transition-colors hover:text-red-500 lg:block  ${scrolled ? "lg:text-black" : "lg:text-white"}`}>
-                    New account
-                </a> */}
-                <Button className="hidden lg:flex !text-[18px]" href="#login">
-                    New Account
-                </Button>
+                <ContactUs
+                    isContactFormOpen={isContactFormOpen}
+                    setIsContactFormOpen={setIsContactFormOpen}
+                />
+
+                {/*<Button className="hidden lg:flex !text-[15px]" onClick={() => setIsContactFormOpen(true)}>*/}
+                {/*    Contact Us*/}
+                {/*</Button>*/}
+
+                {/*console.log("isContactFormOpen-----", isContactFormOpen)*/}
+                {/*/!* Contact Form Modal *!/*/}
+                {/*{isContactFormOpen && (*/}
+                {/*    <div className="fixed w-[600px] h-[530px] ml-[350px] mt-[630px] bg-opacity-50 flex items-center justify-center">*/}
+                {/*        <div className="bg-yellow-400 rounded-lg p-8 max-w-md w-full h-[550px] m-4">*/}
+                {/*            /!* Modal Header *!/*/}
+                {/*            <div className="flex justify-between items-center mb-6">*/}
+                {/*                <h2 className="text-2xl font-medium font-roboto text-black text-center ml-32 ">Contact Us</h2>*/}
+                {/*                <button*/}
+                {/*                    onClick={() => setIsContactFormOpen(false)}*/}
+                {/*                    className="text-gray-500 hover:text-gray-900 text-xl"*/}
+                {/*                >*/}
+                {/*                    ✕*/}
+                {/*                </button>*/}
+                {/*            </div>*/}
+
+                {/*            /!* Contact Form *!/*/}
+                {/*            <form onSubmit={(e) => {*/}
+                {/*                e.preventDefault();*/}
+                {/*                // Handle form submission here*/}
+                {/*                setIsContactFormOpen(false);*/}
+                {/*            }}>*/}
+                {/*                <div className="space-y-4">*/}
+                {/*                    /!* Name Field *!/*/}
+                {/*                    <div>*/}
+                {/*                        <label*/}
+                {/*                            htmlFor="name"*/}
+                {/*                            className="block text-sm font-bold text-gray-700 mb-1 "*/}
+                {/*                        >*/}
+                {/*                            Name*/}
+                {/*                        </label>*/}
+                {/*                        <input*/}
+                {/*                            type="text"*/}
+                {/*                            id="name"*/}
+                {/*                            name="name"*/}
+                {/*                            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black"*/}
+                {/*                            required*/}
+                {/*                        />*/}
+                {/*                    </div>*/}
+
+                {/*                    /!* Email Field *!/*/}
+                {/*                    <div>*/}
+                {/*                        <label*/}
+                {/*                            htmlFor="email"*/}
+                {/*                            className="block text-sm font-bold text-gray-700 mb-1 "*/}
+                {/*                        >*/}
+                {/*                            Email*/}
+                {/*                        </label>*/}
+                {/*                        <input*/}
+                {/*                            type="email"*/}
+                {/*                            id="email"*/}
+                {/*                            name="email"*/}
+                {/*                            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black"*/}
+                {/*                            required*/}
+                {/*                        />*/}
+                {/*                    </div>*/}
+                {/*                    /!* Phone Field *!/*/}
+                {/*                    <div>*/}
+                {/*                        <label*/}
+                {/*                            htmlFor="phone"*/}
+                {/*                            className="block text-sm font-bold text-gray-700 mb-1 "*/}
+                {/*                        >*/}
+                {/*                            Phone*/}
+                {/*                        </label>*/}
+                {/*                        <input*/}
+                {/*                            type="text"*/}
+                {/*                            id="phone"*/}
+                {/*                            name="phone"*/}
+                {/*                            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black"*/}
+                {/*                            required*/}
+                {/*                        />*/}
+                {/*                    </div>*/}
+
+                {/*                    /!* Message Field *!/*/}
+                {/*                    <div>*/}
+                {/*                        <label*/}
+                {/*                            htmlFor="message"*/}
+                {/*                            className="block text-sm font-bold text-gray-700 mb-1"*/}
+                {/*                        >*/}
+                {/*                            Message*/}
+                {/*                        </label>*/}
+                {/*                        <textarea*/}
+                {/*                            id="message"*/}
+                {/*                            name="message"*/}
+                {/*                            rows="4"*/}
+                {/*                            className="w-full px-3 py-2 border border-gray-300 rounded-md bg-white text-black"*/}
+                {/*                            required*/}
+                {/*                        ></textarea>*/}
+                {/*                    </div>*/}
+
+                {/*                    /!* Submit Button *!/*/}
+                {/*                    <button*/}
+                {/*                        type="submit"*/}
+                {/*                        className="w-full bg-blue-500 text-black py-2 px-4 rounded-md hover:bg-blue-600 transition-colors"*/}
+                {/*                    >*/}
+                {/*                        Send Message*/}
+                {/*                    </button>*/}
+                {/*                </div>*/}
+                {/*            </form>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*)}*/}
+
+
+
+
+                {/*This is for the side bar*/}
                 {sideBar &&
+
                     <div className="fixed top-0 left-0  z-999 lg:hidden h-[100vh] w-[100vw] bg-gray-900/50 backdrop-blur-sm">
 
 
                         <div className="bg-[#dbd9d9] h-[100vh] w-[70vw] ">
-                         
+
                                 <div className="flex justify-between items-center w-[100%] p-4 border-b-[#000000] border-[2px]">
                                     <a className="block w-[12rem] xl:mr-8" href="#hero">
                                         <img
@@ -549,10 +663,18 @@ const Header = () => {
                                                     <Link
                                                         to={item.url}
                                                         className="text-black hover:text-blue-500 transition-colors !border-gray-400 py-2 flex items-center justify-between text-[1.6rem]"
-                                                        onClick={() => setSideBar(false)} // Close sidebar on link click
+                                                        onClick={() => {
+                                                            setSideBar(false);  // Close sidebar
+                                                            if (item.title === "Contact Us") {
+                                                                setIsContactFormOpen(true)
+                                                            }
+                                                        }}
                                                     >
                                                         {item.title} <IoMdArrowRoundForward/>
+                                                        <ContactUs isContactFormOpen={isContactFormOpen} setIsContactFormOpen={setIsContactFormOpen}/>
+
                                                     </Link>
+
                                                 )}
                                             </li>
                                         ))}
@@ -562,7 +684,6 @@ const Header = () => {
 
                     </div>
                 }
-
                 <Button className="ml-auto lg:hidden" onClick={() => setSideBar(!sideBar)}>
                     <MenuSvg openNavigation={openNavigation} />
                 </Button>
