@@ -5,12 +5,14 @@ import Roadmap from '../sections/Roadmap'
 import Footer from '../components/Footer'
 import TestimonialComponent from '../components/TestimonialComponent'
 import Services from '../sections/Benefits'
+import Team from '../components/Team'
 
 const Home = () => {
     return (
         <div>
 
             <Hero />
+            <Team />
             <TestimonialComponent/>
             {/*<Services />*/}
             {/* <Collaboration /> */}

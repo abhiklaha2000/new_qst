@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Section from '../components/Section';
+import Marquee from 'react-fast-marquee';
 
 const jobData = {
     title: "SAP Business One Functional Consultant",
@@ -64,9 +65,9 @@ const Career = () => {
     };
 
     return (
-        <Section className="pt-20 pb-16">
+        <Section className="pt-20 pb-16 flex items-center">
             <div className="container mx-auto px-4">
-                <h1 className="text-4xl mb-[35px] font-bold !text-center text-blue-900 mb-2 inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2 mt-6">Career Opportunities at QuantumBrix</h1>
+                {/* <h1 className="text-4xl mb-[35px] font-bold !text-center text-blue-900 mb-2 inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2 mt-6">Career Opportunities at QuantumBrix</h1>
 
                 <div className="bg-white rounded-lg shadow-lg p-6 mb-8 ">
                     <div className="flex justify-between items-center">
@@ -219,7 +220,9 @@ const Career = () => {
                             </form>
                         </div>
                     </div>
-                )}
+                )} */}
+
+                <marquee className='text-blue-900 mt-24 text-3xl xl:text-3xl'>Coming Soon...</marquee>
             </div>
         </Section>
     );

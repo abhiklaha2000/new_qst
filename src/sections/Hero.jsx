@@ -94,10 +94,10 @@ const Hero = () => {
                             {/* Content positioned absolutely over the image */}
                             <div className="absolute inset-0 bg-black/10 flex flex-col items-start justify-center text-center z-10 p-4 lg:m-[100px]">
                                 <p className="w-full md:w-[45vw] text-white font-bold text-[1.1rem] sm:text-[2rem] md:text-[3.5rem] lg:text-[2.5rem] mb-4 leading-relaxed text-left">
-                                    Explore the Possibilities of Development Connect with Quantum Brix
+                                    Explore the Possibilities of Development Connect with Quantum Shift Technologies
                                 </p>
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
-                                    Quantum Brix delivers expert SAP and Oracle solutions, transforming enterprise systems with innovation, efficiency, scalability, and intelligent business insights
+                                    Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
                                 <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
@@ -116,10 +116,10 @@ const Hero = () => {
                             {/* Content positioned absolutely over the image */}
                             <div className="absolute inset-0 bg-black/10 flex flex-col items-start justify-center text-center z-10 p-4 lg:m-[100px]">
                                 <p className="w-full md:w-[45vw] text-white font-bold text-[1.1rem] sm:text-[2rem] md:text-[3.5rem] lg:text-[2.5rem] mb-4 leading-relaxed text-left">
-                                    Explore the Possibilities of Development Connect with Quantum Brix
+                                    Explore the Possibilities of Development Connect with Quantum Shift Technologies
                                 </p>
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
-                                    Quantum Brix delivers expert SAP and Oracle solutions, transforming enterprise systems with innovation, efficiency, scalability, and intelligent business insights
+                                    Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
                                 <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
