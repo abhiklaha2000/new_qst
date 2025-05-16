@@ -23,28 +23,28 @@ const navigation = [
         title: "Home",
         url: "/",
     },
+    // {
+    //     id: "1",
+    //     title: "Services",
+    //     url: "/",
+    // },
     {
         id: "1",
-        title: "Services",
-        url: "/",
-    },
-    {
-        id: "2",
         title: "Portfolio",
         url: "/portfolio",
     },
     {
-        id: "3",
+        id: "2",
         title: "About Us",
         url: "/about-us",
     },
     {
-        id: "4",
+        id: "3",
         title: "Career",
         url: "/career",
     },
     {
-        id: "6",
+        id: "5",
         title: "Contact Us",
         url: "#",
         onlyMobile: true,
@@ -338,7 +338,7 @@ const Header = () => {
                                     <ul className="p-4">
                                         {navigation.map((item) => (
                                             <li key={item.id} className={`py-2 ${item.title !== "Services" && "border-b border-gray-400"}`}>
-                                                {item.title === "Services" ? (
+                                                {/* {item.title === "Services" ? (
                                                     <div>
                                                         <button
                                                             className="text-black hover:text-blue-500 transition-colors
@@ -659,7 +659,7 @@ const Header = () => {
                                                             </ul>
                                                         )}
                                                     </div>
-                                                ) : (
+                                                ) : ( */}
                                                     <Link
                                                         to={item.url}
                                                         className="text-black hover:text-blue-500 transition-colors !border-gray-400 py-2 flex items-center gap-2 text-[1.6rem]"
@@ -675,7 +675,7 @@ const Header = () => {
 
                                                     </Link>
 
-                                                )}
+                                                {/* )} */}
                                             </li>
                                         ))}
                                     </ul>
