@@ -92,3 +92,5 @@ export { default as nodelogo } from './node.png';
 export { default as mongodblogo } from './mongodb.png';
 export { default as mysqlLogo } from './mySql.png';
 export { default as qstLogo } from './qstLogo.png';
+export { default as aiWellnessLogo } from './ai_wellness.png';
+export { default as avatarLogo } from './avatar.png';
