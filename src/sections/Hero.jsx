@@ -143,9 +143,9 @@ const Hero = () => {
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
                                     Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
-                                {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
+                                <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
-                                </button> */}
+                                </button>
                             </div>
                         </div>
                     </SwiperSlide>

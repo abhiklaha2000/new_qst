@@ -342,7 +342,7 @@ const Header = () => {
                                                     <div>
                                                         <button
                                                             className="text-black hover:text-blue-500 transition-colors
-                                                             w-full text-left border-b !border-gray-400 py-2 flex items-center justify-between text-[1.6rem]"
+                                                             w-full text-left border-b !border-gray-400 py-2 flex items-center gap-2 text-[1.6rem]"
                                                             onClick={() => setHovered((prev) => !prev)}
                                                         >
                                                             {item.title} {hovered ? <MdArrowDropDown size={25}/> : <MdArrowDropDown className="rotate-180" size={25}/>}
@@ -662,7 +662,7 @@ const Header = () => {
                                                 ) : (
                                                     <Link
                                                         to={item.url}
-                                                        className="text-black hover:text-blue-500 transition-colors !border-gray-400 py-2 flex items-center justify-between text-[1.6rem]"
+                                                        className="text-black hover:text-blue-500 transition-colors !border-gray-400 py-2 flex items-center gap-2 text-[1.6rem]"
                                                         onClick={() => {
                                                             setSideBar(false);  // Close sidebar
                                                             if (item.title === "Contact Us") {

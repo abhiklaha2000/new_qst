@@ -72,13 +72,13 @@ const Footer = () => {
             <div className="text-lg font-semibold">Useful Links</div>
             <div className="flex flex-col gap-4 mt-5">
               <div className="flex items-center gap-2">
-                <FaLongArrowAltRight /><Link className="hover:text-red-500" to={"/about-us"}>About us</Link>
+                <FaLongArrowAltRight /><Link className="hover:text-red-500" to={"/about-us"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>About us</Link>
               </div>
               <div className="flex items-center gap-2">
-                <FaLongArrowAltRight /><Link className="hover:text-red-500" to={"/portfolio"}>Our Portfolio</Link>
+                <FaLongArrowAltRight /><Link className="hover:text-red-500" to={"/portfolio"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Our Portfolio</Link>
               </div>
               <div className="flex items-center gap-2">
-                <FaLongArrowAltRight /><Link className="hover:text-red-500" to={"/career"}>Career</Link>
+                <FaLongArrowAltRight /><Link className="hover:text-red-500" to={"/career"} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Career</Link>
               </div>
               {/* <div className="flex items-center gap-2">
                 <FaLongArrowAltRight /> Contact Us
