@@ -23,11 +23,6 @@ const navigation = [
         title: "Home",
         url: "/",
     },
-    // {
-    //     id: "1",
-    //     title: "Services",
-    //     url: "/",
-    // },
     {
         id: "1",
         title: "Portfolio",
@@ -118,7 +113,10 @@ const Header = () => {
 
                 <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent lg:p-6 lg:text-white`}>
                     <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row gap-15 text-xl font-bold md:mx-auto xl:gap-15">
-                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`}  onClick={() => navigate("/")}>{navigation[0].title}</div>
+                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`}  onClick={() =>{
+                             navigate("/")
+                             window.scrollTo({ top: 0, behavior: "auto" });
+                          }}>{navigation[0].title}</div>
                         {/*<Menu menuButton={<MenuButton className={`flex items-center gap-1 cursor-pointer hover:text-red-500 ${textColor}`}>{navigation[1].title}*/}
                         {/*    <IoMdArrowDropdown className={`${textColor} "text-lg"`} />*/}
                         {/*</MenuButton>} transition>*/}
@@ -171,9 +169,18 @@ const Header = () => {
                         {/*        <MenuItem className="hover:text-red-500"><Link to={"/services/aws-service"}>AWS Migration</Link></MenuItem>*/}
                         {/*    </SubMenu>*/}
                         {/*</Menu>*/}
-                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`} onClick={() => navigate('/portfolio')}>{navigation[2].title}</div>
-                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`} onClick={() => navigate('/about-us')}>{navigation[3].title}</div>
-                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`} onClick={() => navigate('/career')}>{navigation[4].title}</div>
+                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`} onClick={() => {
+                            navigate('/portfolio')
+                            window.scrollTo({ top: 0, behavior: "auto" });
+                            }} >{navigation[1].title}</div>
+                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`} onClick={() => {
+                            navigate('/about-us')
+                            window.scrollTo({ top: 0, behavior: "auto" });
+                            }}>{navigation[2].title}</div>
+                        <div className={`${textColor} cursor-pointer border-b-2 border-transparent hover:border-red-500 transition-all duration-200 pb-1`} onClick={() => {
+                            navigate('/career')
+                            window.scrollTo({ top: 0, behavior: "auto" });
+                            }}>{navigation[3].title}</div>
 
 
                     </div>
