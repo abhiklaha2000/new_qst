@@ -15,7 +15,7 @@ function ContactUs({isContactFormOpen, setIsContactFormOpen}){
 
           {/* Contact Form Modal */}
           {isContactFormOpen && (
-              <div className="fixed w-full h-[530px] inset-0 mr-[100px] mt-[100px] bg-opacity-50 flex items-center justify-center md:ml-[10px] md:mt-[100px] lg:ml-[40px] lg:mt-[100px] xl:ml-[300px] xl:ml-[20px] xl:mt-[100px]">
+              <div className="fixed w-full h-[530px] inset-0 mr-[100px] mt-[100px] bg-opacity-50 flex items-center justify-center md:ml-[10px] md:mt-[100px] lg:ml-[40px] lg:mt-[100px] xl:ml-[300px] xl:ml-[10px] xl:mt-[100px]">
                   <div className="bg-yellow-400 rounded-lg p-8 max-w-md w-full h-[550px] m-4 ">
                       {/* Modal Header */}
                       <div className="flex justify-between items-center mb-6">
