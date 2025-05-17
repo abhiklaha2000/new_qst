@@ -14,7 +14,7 @@ const Portfolio = () => {
   {
     title: "AI Wellness Voting App",
     image: aiWellnessLogo,
-    link: "#",
+    link: "https://angelsofalignment.org/vote/",
     color: "bg-green-600 hover:bg-green-700",
   },
   {
