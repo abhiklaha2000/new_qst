@@ -12,9 +12,9 @@ function Team() {
   return (
     <section className="w-full mb-12 px-4">
       <div className="text-center mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 inline-block relative">
+        <h1 className="text-center text-4xl mb-4 text-blue-900 font-bold relative inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">
           Meet Our Team
-          <span className="block w-24 h-1 bg-gradient-to-r from-red-500 to-transparent mt-2 mx-auto" />
+          {/* <span className="block w-24 h-1 bg-gradient-to-r from-red-500 to-transparent mt-2 mx-auto" /> */}
         </h1>
       </div>
 
