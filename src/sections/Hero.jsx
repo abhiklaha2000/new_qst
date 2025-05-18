@@ -154,7 +154,7 @@ const Hero = () => {
 
                 </Swiper>
 
-                <div className="hidden relative z-10 mt-20 lg:block text-black">
+                <div className="relative z-10 mt-20 lg:block text-black">
                     {/* <h5 className="tagline mb-6 text-center text-white/50">Quantum Brix Helping People Create Beautiful Website</h5> */}
                     <Marquee>
                         <div className="flex items-center justify-evenly gap-6">
