@@ -4,7 +4,7 @@ const ServiceOffer = () => {
   return (
   <section class="bg-gradient-to-br from-blue-50 to-purple-50 py-16 px-4 md:px-8 lg:px-16">
   <div className="max-w-6xl mx-auto text-center">
-    <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Services</h2>
+    <h2 className="text-center text-4xl mb-4 text-blue-900 font-bold relative inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">Our Services</h2>
     <p className="text-lg text-gray-600 mb-12">We offer a wide range of digital solutions tailored to your needs.</p>
 
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
