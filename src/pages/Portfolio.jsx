@@ -43,12 +43,12 @@ const Portfolio = () => {
   },
 ];
   return (
-    <Section className="pt-[12rem] -mt-[5.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings >
+    <Section className="pt-[12rem] -mt-[8.50rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings >
       <div className="container relative mb-[5rem]" ref={parallaxRef}>
         <div className="container relative text-black" ref={parallaxRef}>
              <section className="bg-white py-16 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Portfolio</h2>
+        <h2 className="text-center text-4xl mb-4 text-blue-900 font-bold relative inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">Our Portfolio</h2>
         <p className="text-lg text-gray-600 mb-12">
           Explore some of the amazing projects we've delivered.
         </p>
