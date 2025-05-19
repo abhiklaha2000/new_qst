@@ -88,7 +88,7 @@ const Footer = () => {
             <h3 className="text-3xl font-bold mb-4">About Us</h3>
             <div className="w-14 h-[3px] mb-7" style={{ backgroundColor: "rgb(244, 30, 126)" }}></div>
             <p className="mb-2" style={{ color: "rgb(190, 190, 190)" }}>
-                Quantum Shift Technologies, founded in 2022 by a team with over 12 years of IT experience, delivers modern, tailored solutions that drive business growth and transformation. Our expertise includes building scalable web applications with the MERN stack, deploying secure and reliable solutions on AWS, and creating intelligent AI avatars that enhance user engagement. With a certified and versatile team, we combine technical excellence with a collaborative approach to help organizations innovate, streamline operations, and achieve lasting success in the digital era.
+                Quantum Shift Technologies, founded in 2022 by a team with 12+ years of IT experience, delivers modern, scalable solutions using the MERN stack, AWS, and AI avatars. Our certified team blends technical expertise with a collaborative approach to help businesses innovate, grow, and succeed in the digital era.
             </p>
           </div>
           {/* Our Quick Link */}
