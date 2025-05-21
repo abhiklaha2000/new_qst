@@ -43,7 +43,7 @@ const Portfolio = () => {
   },
 ];
   return (
-    <Section className="pt-[12rem] -mt-[8.50rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings >
+    <Section className="pt-[9rem] -mt-[8.50rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings >
       <div className="container relative mb-[5rem]" ref={parallaxRef}>
         <div className="container relative text-black" ref={parallaxRef}>
              <section className="bg-white py-16 px-4 md:px-8 lg:px-16">

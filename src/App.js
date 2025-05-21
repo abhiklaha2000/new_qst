@@ -18,12 +18,15 @@ import '@szhsin/react-menu/dist/transitions/zoom.css';
 import OsService from './pages/OsServicePages/OsService';
 import OracleServices from './pages/OraclePages/OracleService';
 import AWSService from './pages/AWSPages/AWSService';
+import NewNavbar from './components/NewNavbar';
 
 function App() {
   return (
     <Router>
             <div className="overflow-hidden">
-                <Navbar />
+              <NewNavbar />
+                {/* <Navbar /> */}
+                
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/services" element={<Services />} />
