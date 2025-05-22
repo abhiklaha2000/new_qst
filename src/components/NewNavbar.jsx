@@ -18,6 +18,7 @@ const NewNavbar = () => {
   }, [location]);
 
   const handleNavClick = (to) => {
+    setMenuOpen(false);   // <-- Close the menu immediately
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -98,50 +99,57 @@ const NewNavbar = () => {
           </div>
 
           {/* Mobile Menu */}
-          {menuOpen && (
+         <div
+            style={{ zIndex: 9999 }}
+            className={`
+              fixed inset-0 z-50 bg-black bg-opacity-60 flex justify-end
+              transition-opacity duration-300
+              ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}
+            `}
+            onClick={toggleMobileMenu}
+          >
             <div
-              style={{ zIndex: 9999 }}
-              className="fixed inset-0 z-50 bg-black bg-opacity-60 flex justify-end transition-all duration-700"
-              onClick={toggleMobileMenu}
+              className={`
+                w-4/5 max-w-xs h-full bg-gray-900 px-4 pb-4 pt-8 shadow-lg
+                absolute right-0 top-0
+                transition-transform duration-500 ease-in-out
+                ${menuOpen ? "translate-x-0" : "translate-x-full"}
+              `}
+              onClick={e => e.stopPropagation()}
             >
-              <div
-                className="w-4/5 max-w-xs h-full bg-gray-900 px-4 pb-4 pt-8 shadow-lg transform transition-transform duration-700 translate-x-0"
-                onClick={e => e.stopPropagation()}
+              <button
+                className="absolute top-4 right-4 text-white text-2xl"
+                onClick={toggleMobileMenu}
               >
-                <button
-                  className="absolute top-4 right-4 text-white text-2xl"
-                  onClick={toggleMobileMenu}
-                >
-                  &times;
-                </button>
-                <ul className="space-y-4 text-lg text-blue-500 font-medium mt-8">
-                  <li>
-                    <button className="w-full text-left" onClick={() => handleNavClick("/")}>
-                      Home
-                    </button>
-                  </li>
-                  <li>
-                    <button className="w-full text-left" onClick={() => handleNavClick("/portfolio")}>
-                      Portfolio
-                    </button>
-                  </li>
-                  <li>
-                    <button className="w-full text-left" onClick={() => handleNavClick("/about-us")}>
-                      About Us
-                    </button>
-                  </li>
-                  <li>
-                    <button className="w-full text-left" onClick={() => {
-                      setIsContactFormOpen(true)
-                      setMenuOpen(false)
-                      }}>
-                      Contact Us
-                    </button>
-                  </li>
-                </ul>
-              </div>
+                &times;
+              </button>
+              <ul className="space-y-4 text-lg text-blue-500 font-medium mt-8">
+                <li>
+                  <button className="w-full text-left" onClick={() => handleNavClick("/")}>
+                    Home
+                  </button>
+                </li>
+                <li>
+                  <button className="w-full text-left" onClick={() => handleNavClick("/portfolio")}>
+                    Portfolio
+                  </button>
+                </li>
+                <li>
+                  <button className="w-full text-left" onClick={() => handleNavClick("/about-us")}>
+                    About Us
+                  </button>
+                </li>
+                <li>
+                  <button className="w-full text-left" onClick={() => {
+                    setIsContactFormOpen(true)
+                    setMenuOpen(false)
+                  }}>
+                    Contact Us
+                  </button>
+                </li>
+              </ul>
             </div>
-          )}
+          </div>
         </>
       )}
     </div>
