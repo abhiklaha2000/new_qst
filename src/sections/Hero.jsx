@@ -157,22 +157,21 @@ const Hero = () => {
                 <div className="relative z-10 mt-20 lg:block text-black">
                     {/* <h5 className="tagline mb-6 text-center text-white/50">Quantum Brix Helping People Create Beautiful Website</h5> */}
                     <Marquee>
-                        <div className="flex items-center justify-evenly gap-6">
-                            <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={reactlogo} width={100} height={20} alt="" />
+                        <div className="flex items-center gap-x-6 lg:gap-x-16 xl:gap-x-32">
+                            <div className="flex items-center justify-center flex-shrink-0 min-w-[120px] h-[8.5rem]">
+                                <img src={reactlogo} width={80} height={20} alt="React" />
                             </div>
-                            <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={nodelogo} width={134} height={28} alt="" />
+                            <div className="flex items-center justify-center flex-shrink-0 min-w-[140px] h-[8.5rem]">
+                                <img src={nodelogo} width={134} height={28} alt="Node.js" />
                             </div>
-                            <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={mongodblogo} width={134} height={60} alt="" />
-                                {/* Linux Website */}
+                            <div className="flex items-center justify-center flex-shrink-0 min-w-[140px] h-[8.5rem]">
+                                <img src={mongodblogo} width={134} height={80} alt="MongoDB" />
                             </div>
-                            <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={awsLogo} width={134} height={40} alt="" />
+                            <div className="flex items-center justify-center flex-shrink-0 min-w-[130px] h-[8.5rem]">
+                                <img src={awsLogo} width={140} height={60} alt="AWS" />
                             </div>
-                            <div className="flex items-center justify-center flex-[0_0_33.33%] h-[8.5rem]">
-                                <img src={mysqlLogo} width={138} height={0} alt="" />
+                            <div className="flex items-center justify-center flex-shrink-0 min-w-[140px] h-[8.5rem]">
+                                <img src={mysqlLogo} width={100} height={5} alt="MySQL" />
                             </div>
                         </div>
                     </Marquee>
