@@ -51,7 +51,7 @@ const TestimonialComponent = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-12 text-center">
+    <div className="max-w-4xl mx-auto px-4 py-12 text-center" data-aos="zoom-in">
       <h2 className="text-4xl mb-[35px] font-bold !text-center text-blue-900 mb-2 inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">What Our Clients Say</h2>
       
       <Swiper

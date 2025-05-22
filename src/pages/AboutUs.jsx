@@ -5,9 +5,9 @@ import { FaArrowRightLong } from 'react-icons/fa6';
 const AboutUs = () => {
     const parallaxRef = useRef(null);
     return (
-        <Section className="pt-[5rem] -mt-[4.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings>
+        <Section  className="pt-[5rem] -mt-[4.25rem]" crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings>
             <div className="container relative text-black md:mt-2 xl:mt-4" ref={parallaxRef}>
-                <h1 className="text-center text-4xl mb-4 text-blue-900 font-bold relative inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">
+                <h1 data-aos="flip-left" className="text-center text-4xl mb-4 text-blue-900 font-bold relative inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">
                     About Quantum Shift Technologies
                 </h1>
                 <p className="text-xl text-start mt-4 mb-6 font-roboto md:mb-[40px] xl:mb-[50px]">

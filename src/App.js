@@ -19,8 +19,19 @@ import OsService from './pages/OsServicePages/OsService';
 import OracleServices from './pages/OraclePages/OracleService';
 import AWSService from './pages/AWSPages/AWSService';
 import NewNavbar from './components/NewNavbar';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // animation duration in ms
+      once: true,    // whether animation should happen only once
+    });
+  }, []);
+
   return (
     <Router>
             <div className="overflow-hidden">

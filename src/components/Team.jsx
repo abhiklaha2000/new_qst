@@ -10,7 +10,7 @@ function Team() {
   ];
 
   return (
-    <section className="w-full mb-12 px-4">
+    <section className="w-full mb-12 px-4" data-aos="fade-up">
       <div className="text-center mb-10">
         <h1 className="text-center text-4xl mb-4 text-blue-900 font-bold relative inline-block after:content-[''] after:block after:w-full after:h-1 after:bg-gradient-to-r after:from-red-500 after:to-transparent after:mt-2">
           Meet Our Team

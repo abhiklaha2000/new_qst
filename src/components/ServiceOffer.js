@@ -9,27 +9,27 @@ const ServiceOffer = () => {
 
     <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
     
-      <div className="bg-white border-t-4 border-blue-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="bg-white border-t-4 border-blue-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"  data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-blue-600 mb-2">AI Chatbot Making (AI Avatar)</h3>
         <p className="text-gray-700">Build intelligent, human-like avatars for automated conversations.</p>
       </div>
 
-      <div className="bg-white border-t-4 border-green-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="bg-white border-t-4 border-green-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"  data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-green-600 mb-2">E-Commerce Website Making</h3>
         <p className="text-gray-700">Custom-built online stores designed for performance and sales.</p>
       </div>
 
-      <div className="bg-white border-t-4 border-pink-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="bg-white border-t-4 border-pink-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"  data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-pink-600 mb-2">Blogging Website Making</h3>
         <p className="text-gray-700">Modern blogs for personal or business content with easy management.</p>
       </div>
 
-      <div className="bg-white border-t-4 border-yellow-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="bg-white border-t-4 border-yellow-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"  data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-yellow-600 mb-2">Landing Page Design</h3>
         <p className="text-gray-700">High-converting pages for your marketing campaigns or products.</p>
       </div>
 
-      <div className="bg-white border-t-4 border-purple-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+      <div className="bg-white border-t-4 border-purple-500 p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300"  data-aos="fade-up">
         <h3 className="text-2xl font-semibold text-purple-600 mb-2">Custom Web-Based Apps</h3>
         <p className="text-gray-700">We build any type of web application tailored to your business needs.</p>
       </div>
