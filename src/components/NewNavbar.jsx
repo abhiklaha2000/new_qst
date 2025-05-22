@@ -2,9 +2,13 @@ import React, { useState ,useEffect} from "react";
 import { FaBars, FaAngleDown } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom"; // or use <a> if not using React Router
 import { qstLogo } from "../assets";
+import ContactUs from "./contactUs";
+import Button from "./Button";
 
 const NewNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+  
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -21,7 +25,7 @@ const NewNavbar = () => {
 
   return (
     <div className="bg-gray-900 shadow-md h-[100px] xl:h-[120px] z-50 relative">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between pt-3 md:pt-1 lg:pt-0  ">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between pt-3 md:pt-1  md:flex md:justify-between lg:pt-0 ">
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <a href="#" title="Banking Sector">
@@ -47,9 +51,16 @@ const NewNavbar = () => {
         </ul>
         {/* CTA */}
 
-        <button className="hidden md:block md:bg-blue-500 md:text-white md:rounded-md md:hover:text-white-500 md:transition md:duration-300 h-[40px] w-[120px] md:cursor-pointer ">
+        {/* <button className="hidden md:block md:bg-blue-500 md:text-white md:rounded-md md:hover:text-white-500 md:transition md:duration-300 h-[40px] w-[120px] md:cursor-pointer ">
           CONTACT US
-        </button>
+        </button> */}
+
+        
+        <ContactUs
+            isContactFormOpen={isContactFormOpen}
+            setIsContactFormOpen={setIsContactFormOpen}
+        />
+
 
         {/* Mobile menu button */}
         <button style={{ position: "relative", zIndex: 10000 }} className={`${menuOpen ? "hidden" : ""} md:hidden text-2xl`} onClick={toggleMobileMenu}>
@@ -57,6 +68,10 @@ const NewNavbar = () => {
         </button>
       </div>
       {console.log("menuOpen====", menuOpen)}
+
+
+
+
       {/* Mobile Menu */}
      {menuOpen && (
         <div
@@ -79,9 +94,13 @@ const NewNavbar = () => {
               <li><Link to="/portfolio" onClick={toggleMobileMenu}>Portfolio</Link></li>
               <li><Link to="/about-us" onClick={toggleMobileMenu}>About Us</Link></li>
               <li>
-                <a href="#" className="" onClick={toggleMobileMenu}>
+                <Link className="" onClick={() => setIsContactFormOpen(true)}>
                   Contact Us
-                </a>
+                  <ContactUs
+                      isContactFormOpen={isContactFormOpen}
+                      setIsContactFormOpen={setIsContactFormOpen}
+                  />
+                </Link>
               </li>
             </ul>
           </div>
