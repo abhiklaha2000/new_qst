@@ -83,10 +83,11 @@ const NewNavbar = () => {
               </li>
             </ul>
 
-            <ContactUs
-              isContactFormOpen={isContactFormOpen}
-              setIsContactFormOpen={setIsContactFormOpen}
-            />
+             <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
+                Contact Us
+            </button> 
+
+     {isContactFormOpen && <ContactUs setIsContactFormOpen={setIsContactFormOpen}/>}
 
             {/* Mobile menu button */}
             <button

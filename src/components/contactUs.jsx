@@ -5,7 +5,7 @@ import Button from "./Button";
 import emailjs from "emailjs-com";
 
 
-function ContactUs({ isContactFormOpen, setIsContactFormOpen }) {
+function ContactUs({ setIsContactFormOpen }) {
     const [formErrors, setFormErrors] = useState({});
     const formRef = useRef();
     const [loading, setLoading] = useState(false);
@@ -48,11 +48,11 @@ function ContactUs({ isContactFormOpen, setIsContactFormOpen }) {
             {/* <Button className="hidden md:block md:text-lg" onClick={() => setIsContactFormOpen(true)}>
                 Contact Us
             </Button> */}
-            <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
+            {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
                 Contact Us
-            </button>
+            </button> */}
             {/* Contact Form Modal */}
-            {isContactFormOpen && (
+            
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm">
                     <div className="relative bg-gradient-to-br from-yellow-300 via-yellow-400 to-yellow-500 rounded-2xl shadow-2xl p-8 max-w-md w-full m-4 border-4 border-white/30">
                         {/* Modal Header */}
@@ -155,7 +155,7 @@ function ContactUs({ isContactFormOpen, setIsContactFormOpen }) {
                         </form>
                     </div>
                 </div>
-            )}
+        
         </div>
     );
 }

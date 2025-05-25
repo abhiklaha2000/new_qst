@@ -93,7 +93,7 @@ const Hero = () => {
                                 className="w-[100vw] h-[57vh] md:h-[60vh] lg:h-[90vh] object-fit"
                             />
                             {/* Content positioned absolutely over the image */}
-                            <div className="absolute inset-0 bg-black/10 flex flex-col items-start justify-center text-center z-10 p-4 lg:m-[100px]">
+                            <div className="absolute inset-0 bg-black/10 flex flex-col items-start justify-center text-center z-10 p-4 lg:p-[100px]">
                                 <p className="w-full md:w-[45vw] text-white font-bold text-[1.1rem] sm:text-[2rem] md:text-[3.5rem] lg:text-[2.5rem] mb-4 leading-relaxed text-left">
                                     Explore the Possibilities of Development Connect with Quantum Shift Technologies
                                 </p>
@@ -103,10 +103,12 @@ const Hero = () => {
                                 {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
                                 </button> */}
-                                 <ContactUs
-                    isContactFormOpen={isContactFormOpen}
+                                 <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
+                Contact Us
+            </button> 
+                   {/* { isContactFormOpen &&             <ContactUs
                     setIsContactFormOpen={setIsContactFormOpen}
-                />
+                />} */}
                             </div>
                         </div>
                     </SwiperSlide>
@@ -119,7 +121,7 @@ const Hero = () => {
                                 className="w-[100vw] h-[57vh] md:h-[60vh] lg:h-[90vh] object-fit"
                             />
                             {/* Content positioned absolutely over the image */}
-                            <div className="absolute inset-0 bg-black/10 flex flex-col items-start justify-center text-center z-10 p-4 lg:m-[100px]">
+                            <div className="absolute inset-0 bg-black/10 flex flex-col items-start justify-center text-center z-10 p-4 lg:p-[100px]">
                                 <p className="w-full md:w-[45vw] text-white font-bold text-[1.1rem] sm:text-[2rem] md:text-[3.5rem] lg:text-[2.5rem] mb-4 leading-relaxed text-left">
                                     Explore the Possibilities of Development Connect with Quantum Shift Technologies
                                 </p>
@@ -129,10 +131,13 @@ const Hero = () => {
                                 {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
                                 </button> */}
-                                 <ContactUs
-                    isContactFormOpen={isContactFormOpen}
+                                 <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
+                Contact Us
+            </button> 
+                            {/* {isContactFormOpen &&    <ContactUs
+              
                     setIsContactFormOpen={setIsContactFormOpen}
-                />
+                /> } */}
                             </div>
                         </div>
                     </SwiperSlide>
@@ -145,7 +150,7 @@ const Hero = () => {
                                 className="w-[100vw] h-[57vh] md:h-[60vh] lg:h-[90vh] object-fit"
                             />
                             {/* Content positioned absolutely over the image */}
-                            <div className="absolute inset-0 bg-black/10 flex flex-col bg-black/40 items-start justify-center text-center z-10 p-4 lg:m-[100px]">
+                            <div className="absolute inset-0 bg-black/10 flex flex-col bg-black/40 items-start justify-center text-center z-10 p-4 lg:p-[100px]">
                                 <p className="w-full md:w-[45vw] text-white font-bold text-[1.1rem] sm:text-[2rem] md:text-[3.5rem] lg:text-[2.5rem] mb-4 leading-relaxed text-left">
                                     Explore the Possibilities of Development Connect with Quantum Shift Technologies
                                 </p>
@@ -155,10 +160,9 @@ const Hero = () => {
                                 {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
                                 </button> */}
-                                 <ContactUs
-                    isContactFormOpen={isContactFormOpen}
-                    setIsContactFormOpen={setIsContactFormOpen}
-                />
+                                 <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
+                Contact Us
+            </button>  
                             </div>
                         </div>
                     </SwiperSlide>
@@ -166,6 +170,9 @@ const Hero = () => {
                     <SwiperSlide className="h-[500px] flex items-center justify-center">Slide 4</SwiperSlide> */}
 
                 </Swiper>
+
+                 {isContactFormOpen && <ContactUs setIsContactFormOpen={setIsContactFormOpen}
+                /> }
 
                 <div className="relative z-10 mt-20 lg:block text-black">
                     {/* <h5 className="tagline mb-6 text-center text-white/50">Quantum Brix Helping People Create Beautiful Website</h5> */}
