@@ -16,6 +16,7 @@ import { Autoplay } from 'swiper/modules';
 import FirstSlide from "../assets/hero/first.png";
 import SecondSlide from "../assets/hero/second.png";
 import ThirdSlide from "../assets/hero/third.png";
+import ContactUs from "../components/contactUs";
 const BackgroundCircles = ({ parallaxRef }) => {
     const [mounted, setMounted] = useState(false);
 
@@ -61,7 +62,7 @@ const BackgroundCircles = ({ parallaxRef }) => {
 
 const Hero = () => {
     const parallaxRef = useRef(null);
-
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
     return (
         <Section className=" " crosses crossesOffset="lg:translate-y-[5.25rem]" customPaddings id="hero">
             <div className="relative" ref={parallaxRef}>
@@ -79,7 +80,7 @@ const Hero = () => {
                     }}
                     pagination={{ clickable: true }}
                     // scrollbar={{ draggable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     onSlideChange={() => console.log('slide change')}
                     className="h-[57vh] md:h-[60vh] lg:h-[90vh]"
                 >
@@ -99,9 +100,13 @@ const Hero = () => {
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
                                     Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
-                                <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
+                                {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
-                                </button>
+                                </button> */}
+                                 <ContactUs
+                    isContactFormOpen={isContactFormOpen}
+                    setIsContactFormOpen={setIsContactFormOpen}
+                />
                             </div>
                         </div>
                     </SwiperSlide>
@@ -121,9 +126,13 @@ const Hero = () => {
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
                                     Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
-                                <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
+                                {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
-                                </button>
+                                </button> */}
+                                 <ContactUs
+                    isContactFormOpen={isContactFormOpen}
+                    setIsContactFormOpen={setIsContactFormOpen}
+                />
                             </div>
                         </div>
                     </SwiperSlide>
@@ -143,9 +152,13 @@ const Hero = () => {
                                 <p className="w-full md:w-[45vw] text-white/70 text-[0.9rem] sm:text-[1rem] md:text-[2rem] lg:text-[1rem] mb-4 leading-relaxed text-left">
                                     Quantum Shift Technologies specializes in MERN stack development and AI avatars for modern digital solutions.
                                 </p>
-                                <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
+                                {/* <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded">
                                     Get started
-                                </button>
+                                </button> */}
+                                 <ContactUs
+                    isContactFormOpen={isContactFormOpen}
+                    setIsContactFormOpen={setIsContactFormOpen}
+                />
                             </div>
                         </div>
                     </SwiperSlide>

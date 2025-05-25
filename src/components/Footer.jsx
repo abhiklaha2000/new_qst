@@ -149,10 +149,10 @@ const Footer = () => {
             <div className="w-14 h-[3px] mb-7" style={{ backgroundColor: "rgb(244, 30, 126)" }}></div>
             <div>
                 <p className="mb-2" style={{ color: "rgb(190, 190, 190)"}}>
-                  <span className="inline-block"  >Phone:</span> +91 9836445738
+                  <span className="inline-block"  >Phone:</span> +91 8918337826 / 9836445738
                 </p>
                 <p className="mb-2" style={{ color: "rgb(190, 190, 190)" }}>
-                  <span className="inline-block" >E-mail:</span> support@quantumshifttechnologies.com
+                  <span className="inline-block" >E-mail:</span> sajalghosh.itrd@gmail.com / abhiklaha2000@gmail.com
                 </p>
             </div>
           
