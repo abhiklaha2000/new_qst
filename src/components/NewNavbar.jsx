@@ -83,7 +83,7 @@ const NewNavbar = () => {
               </li>
             </ul>
 
-             <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded" onClick={() => setIsContactFormOpen(true)}>
+             <button href="#pricing" className="text-[0.875rem] sm:text-[1rem] p-2 sm:p-3 bg-red-600 rounded hidden md:block" onClick={() => setIsContactFormOpen(true)}>
                 Contact Us
             </button> 
 
@@ -92,7 +92,7 @@ const NewNavbar = () => {
             {/* Mobile menu button */}
             <button
               style={{ position: "relative", zIndex: 10000 }}
-              className={`${menuOpen ? "hidden" : ""} md:hidden text-2xl`}
+              className={`${menuOpen ? "hidden" : ""} md:hidden text-2xl `}
               onClick={toggleMobileMenu}
             >
               <FaBars />
